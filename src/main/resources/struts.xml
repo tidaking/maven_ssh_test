@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="user" extends="struts-default" namespace="/">
+		<action name="user_*" class="com.robin.web.action.UserAction" method="{1}" >
+		<!-- <action name="user_*" class="userAction" method="{1}" > -->
+          <!--class可以托管到spring上-->
+			<!-- <result name="save_success" type="dispatcher"></result> -->
+			<result name="success" type="dispatcher">/success.jsp</result>
+		</action>
+	</package>
+  
+  <!--struts2 UI主题(防止Struts2标签造成页面框架有问题) -->
+  	<constant name="struts.ui.theme" value="simple"></constant>
+</struts>
